@@ -1,82 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="description" content="Page d'un fake Gmail">
-    <link id="mail-icon" rel="shortcut icon" href="./asset/mail.png" type="image/x-icon">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <title>Gmail Page</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Gmail Single Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header role="banner">
-        <h1>Gmail Page</h1>
-        <nav role="navigation">
-            <ul>
-                <li><a href="#pros">Pour les pros</a></li>
-                <li><a href="#login">Connexion</a></li>
-            </ul>
+    <header>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#pros">Pour les Pros</a>
+            <a href="#connexion" class="btn-red">Connexion</a>
         </nav>
-        <div id="login" role="dialog" aria-labelledby="loginTitle" aria-describedby="loginDesc">
-            <h2 id="loginTitle">Connexion</h2>
-            <form action="login.php" method="post">
-                <label for="username">Nom d'utilisateur:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Se connecter</button>
-            </form>
-        </div>
     </header>
-    <main>
-        <div class="btn btn__round btn--red">
-        <a href="#bottomPageIndex">
-            <img src="./asset/arrow.png" alt="">
-        </a>
-    </div>
-    <div id="#welcomePage" class="welcome-page">
-        <img src="./asset/home-hero.jpg" class="background-picture" alt="fond arriere plan">
-        <div class="welcome-content">
-            <h1>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h1>
-            <a href="#signUpForm">
-                <div class="btn btn__square btn--red text--uppercase">créer un compte</div>
-            </a>
-        </div>
-    </div>
-    <div class="inbox-container">
-        <h2>Une boîte de réception entièrement repensée</h2>
-        <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
-    </div>
-    <div id="signUpForm" class="form">
-        <div class="form__title">Créer un compte</div>
-        <form action="./connexion.html" method="post">
-            <ul class="form__content">
-                <li class="form__question">
-                    <label class="form__label" for="lastName">Nom : *</label>
-                    <input class="form__input" type="text" id="lastName" name="user_last_name" placeholder="Votre nom">
-                </li>
-                <li class="form__question">
-                    <label class="form__label" for="firstName">Prénom : *</label>
-                    <input class="form__input" type="text" id="firstName" name="user_first_name" placeholder="Votre prénom">
-                </li>
-                <li class="form__question">
-                    <label class="form__label" for="mail">Mail : *</label>
-                    <input class="form__input" type="email" id="mail" name="user_mail" placeholder="Votre mail">
-                </li>
-                <li class="form__question">
-                    <label class="form__label" for="password">Choisissez votre mot de passe : *</label>
-                    <input class="form__input" type="password" id="password" name="user_password" placeholder="Veuillez entrer un mot de passe">
-                </li>
-                <li class="form__submit">
-                    <input class="btn btn__square btn--blue text--uppercase" type="submit" value="valider votre compte">
-                </li>
-            </ul>
+
+    <section id="home">
+        <h1>Bienvenue sur Gmail</h1>
+        <a href="#connexion" class="scroll-down">↓</a>
+    </section>
+
+    <section id="connexion">
+        <h2>Connexion</h2>
+        <form>
+            <label for="email">Email :</label>
+            <input type="email" id="email" placeholder="Entrez votre email" required>
+            
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+            
+            <button type="submit" class="btn-red">Se connecter</button>
         </form>
-   </main>
-    <footer role="contentinfo">
-        <p>Footer - Copyright &copy; 2024</p>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Gmail - Tous droits réservés</p>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
