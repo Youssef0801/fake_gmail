@@ -33,7 +33,11 @@ nav a {
     color: black;
     font-weight: 600;
 }
-
+.image-hero{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .btn-red {
     background-color: #dd5347;
     color: white;
