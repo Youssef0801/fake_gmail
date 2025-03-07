@@ -1,20 +1,33 @@
 /* Navigation */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     width: 100%;
     background: white;
-    padding: 15px;
+    padding-left: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    line-height: 7rem;
+    
+}
+ nav ul{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
+    li{
+        width: 20rem;
+      
+        text-align: center;
+        a{
+            display: block;
+            width: 100%;
+        }
+    }
+ }
 
 nav a {
     text-decoration: none;
@@ -35,7 +48,6 @@ nav a {
 .btn-red {
     background-color: #dd5347;
     color: white;
-    padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
 }

@@ -12,25 +12,27 @@
     <header>
         <div class="logo">
             <img src="asset/mail.png" alt="Gmail Logo" class="logo">
+            <a href="#">gmail</a>
         </div>
-        <nav role="navigation">
+        <nav>
             
-            <p>Gmail</p>
-            <a href="#pros">Pour les Pros</a>
-            <a href="#connexion">Connexion</a>
-            <a href="#connexion" class="btn-red">Créer un compte</a>
+            <ul>
+                <li><a href="#pros">Pour les Pros</a></li>
+                <li><a href="#connexion">Connexion</a></li>
+                <li><a href="#connexion" class="btn-red">Créer un compte</a></li>
+            </ul>
         </nav>
     </header>
-    <main role="main">
-    <section id="home">
+    <main >
+   
     
         <div class="image-container">
             <img src="asset/home-hero.jpg" alt="Gmail" class="image-hero">
             <h1 class="overlay-text">Bienvenue sur Gmail</h1>
         </div>
 
-                <a href="#connexion" class="scroll-down" aria-label="Faire défiler vers la connexion">↓</a>
-    </section>
+                <!-- <a href="#connexion" class="scroll-down" aria-label="Faire défiler vers la connexion">↓</a> -->
+   
 
 <section>
     <h2>Une boîte de réception<br>entièrement repensée</h2>
@@ -43,11 +45,11 @@
             <fieldset>
             <legend>Créer un compte </legend>
             
-            <label for="email">Nom *</label>
-            <input type="email" id="email" placeholder="Votre nom" required>
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" placeholder="Votre nom" required>
             
-            <label for="email">Prénom *</label>
-            <input type="email" id="email" placeholder="Votre prénom" required>
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" placeholder="Votre prénom" required>
             
             <label for="email">Mail *</label>
             <input type="email" id="email" placeholder="assehnoune.youssef@gmail.com" required>
@@ -60,12 +62,12 @@
         </form>
     </section>
     </main>
-    <footer role="contentinfo">
+    <footer>
         <p>&copy; <span id="year"></span> Gmail - Tous droits réservés</p>
     </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+        /* document.getElementById("year").textContent = new Date().getFullYear(); */
     </script>
 </body>
 </html>
