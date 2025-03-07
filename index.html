@@ -4,38 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gmail Single Page</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#home">Accueil</a>
+        <div class="logo">
+            <img src="asset/mail.png" alt="Gmail Logo" class="logo">
+        </div>
+        <nav role="navigation">
+            
+            <p>Gmail</p>
             <a href="#pros">Pour les Pros</a>
-            <a href="#connexion" class="btn-red">Connexion</a>
+            <a href="#connexion">Connexion</a>
+            <a href="#connexion" class="btn-red">Créer un compte</a>
         </nav>
     </header>
-
+    <main role="main">
     <section id="home">
-        <h1>Bienvenue sur Gmail</h1>
-        <img src="asset/home-hero.jpg" alt="gmail"  class="image-hero">
-        <a href="#connexion" class="scroll-down">↓</a>
+    
+        <div class="image-container">
+            <img src="asset/home-hero.jpg" alt="Gmail" class="image-hero">
+            <h1 class="overlay-text">Bienvenue sur Gmail</h1>
+        </div>
+
+                <a href="#connexion" class="scroll-down" aria-label="Faire défiler vers la connexion">↓</a>
     </section>
+
+<section>
+    <h2>Une boîte de réception<br>entièrement repensée</h2>
+    <p>Avec les nouveaux onglets personnalisables,repérer<br>immédiatement les nouveaux messages et choisissez<br>ceux que vous souhaitez lire en priorité.</p>
+</section>
 
     <section id="connexion">
         <h2>Connexion</h2>
         <form>
-            <label for="email">Email :</label>
-            <input type="email" id="email" placeholder="Entrez votre email" required>
+            <fieldset>
+            <legend>Créer un compte </legend>
             
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+            <label for="email">Nom *</label>
+            <input type="email" id="email" placeholder="Votre nom" required>
+            
+            <label for="email">Prénom *</label>
+            <input type="email" id="email" placeholder="Votre prénom" required>
+            
+            <label for="email">Mail *</label>
+            <input type="email" id="email" placeholder="assehnoune.youssef@gmail.com" required>
+            
+            <label for="password">Choisir votre ùot de passe *</label>
+            <input type="password" id="password" placeholder="******" required>
             
             <button type="submit" class="btn-red">Se connecter</button>
+        </fieldset>
         </form>
     </section>
-
-    <footer>
+    </main>
+    <footer role="contentinfo">
         <p>&copy; <span id="year"></span> Gmail - Tous droits réservés</p>
     </footer>
 
