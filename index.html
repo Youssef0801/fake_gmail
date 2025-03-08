@@ -5,42 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gmail Single Page</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="asset/mail.png" alt="Gmail Logo" class="logo">
-            <a href="#">gmail</a>
+            <a href="#">Gmail</a>
         </div>
         <nav>
             
             <ul>
                 <li><a href="#pros">Pour les Pros</a></li>
-                <li><a href="#connexion">Connexion</a></li>
-                <li><a href="#connexion" class="btn-red">Créer un compte</a></li>
+                <li><a href="#form-container">Connexion</a></li>
+                <li><a href="#form-container" class="btn-red">Créer un compte</a></li>
             </ul>
         </nav>
     </header>
     <main >
-   
+
     
         <div class="image-container">
             <img src="asset/home-hero.jpg" alt="Gmail" class="image-hero">
-            <h1 class="overlay-text">Bienvenue sur Gmail</h1>
+            <h1 class="overlay-text">Retrouvez la fluidité et la<br>simplicité de Gmail sur<br> tous vos appareil</h1>
+            <button>
+                <a href="#form-container" class="btn-red-img">Créer un compte</a>
+            </button>
         </div>
 
                 <!-- <a href="#connexion" class="scroll-down" aria-label="Faire défiler vers la connexion">↓</a> -->
-   
+
 
 <section>
     <h2>Une boîte de réception<br>entièrement repensée</h2>
     <p>Avec les nouveaux onglets personnalisables,repérer<br>immédiatement les nouveaux messages et choisissez<br>ceux que vous souhaitez lire en priorité.</p>
 </section>
 
-    <section id="connexion">
-        <h2>Connexion</h2>
+    <section id="form-container">
         <form>
             <fieldset>
             <legend>Créer un compte </legend>
@@ -54,10 +55,10 @@
             <label for="email">Mail *</label>
             <input type="email" id="email" placeholder="assehnoune.youssef@gmail.com" required>
             
-            <label for="password">Choisir votre ùot de passe *</label>
+            <label for="password">Choisir votre mot de passe *</label>
             <input type="password" id="password" placeholder="******" required>
             
-            <button type="submit" class="btn-red">Se connecter</button>
+            <button type="submit" class="btn-blue">Valider votre compte</button>
         </fieldset>
         </form>
     </section>
